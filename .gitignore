@@ -1,7 +1,11 @@
+
+
+
 ## TEST ---------------------------------------------------------------
 #OS junk files
 [Tt]humbs.db
 *.DS_Store
+*.editorconfig
 
 #Visual Studio files
 *.pidb
@@ -102,6 +106,9 @@ bld/
 
 # Visual Studio 2015/2017 cache/options directory
 .vscode/
+bin/
+obj/
+
 
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
@@ -471,3 +478,4 @@ SnakeGame/obj/Debug/net8.0/SnakeGame.assets.cache
 SnakeGame/obj/Debug/net8.0/SnakeGame.GeneratedMSBuildEditorConfig.editorconfig
 SnakeGame/obj/Debug/net8.0/SnakeGame.AssemblyInfoInputs.cache
 SnakeGame/obj/Debug/net8.0/SnakeGame.AssemblyInfo.cs
+SnakeGame/obj/Debug/net8.0/SnakeGame.assets.cache
