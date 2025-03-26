@@ -28,7 +28,9 @@ add startup screen
 
 
 # classes
-Snake
+Snake: sub?
+
+    
 
 Gamestate:
     playing
@@ -36,7 +38,6 @@ Gamestate:
     ...
 
 Apple
-
 Board
 
 
