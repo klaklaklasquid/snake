@@ -25,3 +25,15 @@ is death
 
 add highscore
 add startup screen
+
+
+# classes
+Snake
+
+Gamestate:
+    playing
+    paused
+    ...
+
+Apple
+
