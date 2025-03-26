@@ -10,6 +10,9 @@ public class Game1 : Game
     private SpriteBatch _spriteBatch;
     private Texture2D _radialGradientTexture;
 
+    private Texture2D _spriteSheet;
+    private Texture2D _background;
+    
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -20,6 +23,9 @@ public class Game1 : Game
         _graphics.PreferredBackBufferWidth = 700;
         _graphics.PreferredBackBufferHeight = 800;
         _graphics.ApplyChanges();
+
+
+
     }
 
     protected override void Initialize()
@@ -32,11 +38,12 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-
         // TODO: use this.Content to load your game content here
 
         //* load the radial gradient
         _radialGradientTexture = CreateRadialGradientTexture(GraphicsDevice, 700, 800);
+        _spriteSheet = Content.Load<Texture2D>("snake");
+        _background = Content.Load<Texture2D>("playingField");
     }
 
     protected override void Update(GameTime gameTime)
@@ -56,6 +63,7 @@ public class Game1 : Game
         _spriteBatch.Begin();
         _spriteBatch.Draw(_radialGradientTexture, new Rectangle(0, 0, 700, 800), Color.White);
         _spriteBatch.End();
+
 
         // TODO: Add your drawing code here
 
