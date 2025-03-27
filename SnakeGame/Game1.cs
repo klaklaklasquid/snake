@@ -6,12 +6,13 @@ namespace SnakeGame;
 
 public class Game1 : Game
 {
-    private GraphicsDeviceManager _graphics;
+    public GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
     private Texture2D _radialGradientTexture;
 
     private Texture2D _spriteSheet;
     private Texture2D _background;
+    private Sprites _sprites;
     
     public Game1()
     {
@@ -33,6 +34,7 @@ public class Game1 : Game
         // TODO: Add your initialization logic here
 
         base.Initialize();
+        
     }
 
     protected override void LoadContent()
@@ -42,8 +44,9 @@ public class Game1 : Game
 
         //* load the radial gradient
         _radialGradientTexture = CreateRadialGradientTexture(GraphicsDevice, 700, 800);
-        _spriteSheet = Content.Load<Texture2D>("snake");
+        
         _background = Content.Load<Texture2D>("playingField");
+        _sprites = new();
     }
 
     protected override void Update(GameTime gameTime)
@@ -62,6 +65,7 @@ public class Game1 : Game
 
         _spriteBatch.Begin();
         _spriteBatch.Draw(_radialGradientTexture, new Rectangle(0, 0, 700, 800), Color.White);
+       // _spriteBatch.Draw(_sprites.SpriteSheet,new Rectangle(50,50,200,300),Color.White);
         _spriteBatch.End();
 
 
