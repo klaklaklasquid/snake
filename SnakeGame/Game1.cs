@@ -10,7 +10,6 @@ public class Game1 : Game
     private SpriteBatch _spriteBatch;
     private Texture2D _radialGradientTexture;
 
-    private Texture2D _spriteSheet;
     private Texture2D _background;
     private Sprites _sprites;
     
@@ -65,8 +64,8 @@ public class Game1 : Game
 
         _spriteBatch.Begin();
         _spriteBatch.Draw(_radialGradientTexture, new Rectangle(0, 0, 700, 800), Color.White);
-       // _spriteBatch.Draw(_sprites.SpriteSheet,new Rectangle(50,50,200,300),Color.White);
         _spriteBatch.End();
+        _sprites.Draw();
 
 
         // TODO: Add your drawing code here
